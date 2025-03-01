@@ -3,4 +3,5 @@ if vim.g.vscode then
   require "user.vscode_keymaps"
 else
   -- Add terminal Neovim config here (optional)
+  require("config.lazy")
 end

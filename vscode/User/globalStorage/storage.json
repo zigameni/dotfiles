@@ -6,7 +6,7 @@
         "workspaces": [],
         "folders": [
             {
-                "folderUri": "file:///home/zigameni/workspace/dotfiles"
+                "folderUri": "file:///mnt/c/Users/ziga/Desktop/Workspace/Faklutet_code/Courses/notes"
             }
         ],
         "emptyWindows": []
@@ -16,21 +16,21 @@
             "file:///home/zigameni/workspace": "__default__profile__",
             "file:///home/zigameni/workspace/byte_exchange_ziga": "__default__profile__",
             "file:///home/zigameni/workspace/dotfiles": "__default__profile__",
-            "file:///home/zigameni": "__default__profile__"
+            "file:///home/zigameni": "__default__profile__",
+            "file:///mnt/c/Users/ziga/Desktop/Workspace/Faklutet_code/Courses/notes": "__default__profile__"
         },
         "emptyWindows": {}
     },
     "windowsState": {
         "lastActiveWindow": {
-            "folder": "file:///home/zigameni/workspace/dotfiles",
-            "backupPath": "/home/zigameni/.config/Code/Backups/6002458c61bc83779e0271871c7f04e7",
+            "folder": "file:///mnt/c/Users/ziga/Desktop/Workspace/Faklutet_code/Courses/notes",
+            "backupPath": "/home/zigameni/.config/Code/Backups/17c11337a64df939493597e1a0612005",
             "uiState": {
-                "mode": 3,
-                "display": 1,
-                "width": 1200,
-                "height": 800,
+                "mode": 1,
                 "x": 32,
                 "y": 32,
+                "width": 1200,
+                "height": 800,
                 "zoomLevel": 1
             }
         },
@@ -54,6 +54,16 @@
             "statusBarBackground": "#0d1117",
             "statusBarBorder": "#30363d",
             "statusBarNoFolderBackground": "#0d1117"
+        },
+        "layoutInfo": {
+            "sideBarSide": "left",
+            "editorPartMinWidth": 220,
+            "titleBarHeight": 35,
+            "activityBarWidth": 48,
+            "sideBarWidth": 300,
+            "auxiliarySideBarWidth": 0,
+            "statusBarHeight": 22,
+            "windowBorder": false
         }
     },
     "lastKnownMenubarData": {

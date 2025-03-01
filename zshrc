@@ -110,7 +110,9 @@ source $ZSH/oh-my-zsh.sh
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
+alias c_drive='cd /mnt/c/Users/ziga/'
 alias workspace='cd /mnt/c/Users/ziga/Desktop/Workspace/'
+alias fakultet_code='cd /mnt/c/Users/ziga/Desktop/Workspace/Faklutet_code'
 alias workspace_byte_exhange='cd "/mnt/c/Users/ziga/Desktop/Workspace/Github Repos/nextjs-course/byte_exchange_ziga"'
 alias n=nvim
 alias vi=nvim
@@ -127,4 +129,6 @@ export NVM_DIR="$HOME/.nvm"
 
 # added by ziga, for vscode not to prompt to be installed on widnows.
 export DONT_PROMPT_WSL_INSTALL=1
+
+
 
