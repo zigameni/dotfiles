@@ -6,7 +6,7 @@
         "workspaces": [],
         "folders": [
             {
-                "folderUri": "file:///mnt/c/Users/ziga/Desktop/Workspace/Faklutet_code/Courses/notes"
+                "folderUri": "file:///home/zigameni/workspace/byte_exchange_ziga"
             }
         ],
         "emptyWindows": []
@@ -23,14 +23,15 @@
     },
     "windowsState": {
         "lastActiveWindow": {
-            "folder": "file:///mnt/c/Users/ziga/Desktop/Workspace/Faklutet_code/Courses/notes",
-            "backupPath": "/home/zigameni/.config/Code/Backups/17c11337a64df939493597e1a0612005",
+            "folder": "file:///home/zigameni/workspace/byte_exchange_ziga",
+            "backupPath": "/home/zigameni/.config/Code/Backups/5136a68411929fdca7fb07272a99f9a0",
             "uiState": {
-                "mode": 1,
-                "x": 32,
-                "y": 32,
+                "mode": 3,
+                "display": 33,
                 "width": 1200,
                 "height": 800,
+                "x": 32,
+                "y": 32,
                 "zoomLevel": 1
             }
         },
@@ -54,16 +55,6 @@
             "statusBarBackground": "#0d1117",
             "statusBarBorder": "#30363d",
             "statusBarNoFolderBackground": "#0d1117"
-        },
-        "layoutInfo": {
-            "sideBarSide": "left",
-            "editorPartMinWidth": 220,
-            "titleBarHeight": 35,
-            "activityBarWidth": 48,
-            "sideBarWidth": 300,
-            "auxiliarySideBarWidth": 0,
-            "statusBarHeight": 22,
-            "windowBorder": false
         }
     },
     "lastKnownMenubarData": {
