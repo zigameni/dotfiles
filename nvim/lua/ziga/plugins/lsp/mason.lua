@@ -50,6 +50,7 @@ return {
         "pylint", -- python linter
         "eslint_d", -- js linter
         "cpplint", -- for c and cpp
+        "clang-format",
       },
     })
   end,

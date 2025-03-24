@@ -1,6 +1,7 @@
 vim.cmd("let g:netrw_liststyle = 3")
 
 local opt = vim.opt
+local fn = vim.fn
 
 opt.relativenumber = true
 opt.number = true
@@ -31,9 +32,54 @@ opt.backspace = "indent,eol,start" -- allow backspace on indent, end of line or 
 -- clipboard
 opt.clipboard:append("unnamedplus") -- use system clipboard as default register
 
+-- Smooth scrolling
+opt.scrolloff = 8 -- Keeps 8 lines visible above/below the cursor when scrolling
+opt.sidescrolloff = 8 -- Keeps 8 columns visible on the sides
+
 -- split windows
 opt.splitright = true -- split vertical window to the right
 opt.splitbelow = true -- split horizontal window to the bottom
 
+-- Undo & Backup Improvements
+opt.undofile = true -- Enables persistent undo
+opt.undodir = fn.stdpath("data") .. "/undo_nvim" -- Set undo directory
+
+-- Faster & Smarter Searching
+opt.incsearch = true -- Show search results as you type
+-- opt.hlsearch = true -- Disable search highlight after search
+
 -- turn off swapfile
 opt.swapfile = false
+
+-- Highlight Yanked Text
+vim.cmd([[
+  augroup YankHighlight
+    autocmd!
+    autocmd TextYankPost * silent! lua vim.highlight.on_yank({timeout = 200})
+  augroup END
+]]) -- (After copying text, it briefly highlights it.)
+
+-- whichwrap controls whether certain keys can "wrap" to the next/previous line
+opt.whichwrap:append("<,>,h,l")
+
+-- Set default colorscheme after plugin load
+vim.api.nvim_create_autocmd("User", {
+  pattern = "LazyDone",
+  callback = function()
+    local themes = {
+      "tokyonight", -- [1]
+      "catppuccin", -- [2]
+      "solarized-osaka", -- [3]
+      -- Add more themes here and increment index as needed
+    }
+
+    local selected_theme_index = 3 -- Change this number to switch themes
+
+    -- Safety check
+    if selected_theme_index > #themes then
+      selected_theme_index = 1
+    end
+
+    vim.cmd.colorscheme(themes[selected_theme_index])
+  end,
+})

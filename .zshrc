@@ -136,3 +136,51 @@ export PATH=~/.npm-global/bin:$PATH
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+
+eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
+
+eval "$(fzf --zsh)"
+
+# ---- Eza (better ls) -----
+
+alias ls="eza --color=always --long --git --no-filesize --icons=always --no-time --no-user --no-permissions"
+
+
+show_file_or_dir_preview="if [ -d {} ]; then eza --tree --color=always {} | head -200; else bat -n --color=always --line-range :500 {}; fi"
+
+export FZF_CTRL_T_OPTS="--preview '$show_file_or_dir_preview'"
+export FZF_ALT_C_OPTS="--preview 'eza --tree --color=always {} | head -200'"
+
+# Advanced customization of fzf options via _fzf_comprun function
+# - The first argument to the function is the name of the command.
+# - You should make sure to pass the rest of the arguments to fzf.
+_fzf_comprun() {
+  local command=$1
+  shift
+
+  case "$command" in
+    cd)           fzf --preview 'eza --tree --color=always {} | head -200' "$@" ;;
+    export|unset) fzf --preview "eval 'echo ${}'"         "$@" ;;
+    ssh)          fzf --preview 'dig {}'                   "$@" ;;
+    *)            fzf --preview "$show_file_or_dir_preview" "$@" ;;
+  esac
+}
+
+export FZF_DEFAULT_COMMAND="fd --type f --hidden \
+  --exclude .git \
+  --exclude node_modules \
+  --exclude .vscode \
+  --exclude .idea \
+  --exclude __pycache__ \
+  --exclude venv \
+  --exclude .venv \
+  --exclude target \
+  --exclude build \
+  --exclude .DS_Store \
+  --exclude .mypy_cache \
+  --exclude .pytest_cache \
+  --exclude .cargo \
+  --exclude .terraform"
+
+export FZF_CTRL_T_COMMAND="$FZF_DEFAULT_COMMAND"
+
