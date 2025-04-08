@@ -17,6 +17,7 @@ This repository contains my personal dotfiles for maintaining a consistent devel
 
 These dotfiles represent my customized development environment, focused on productivity and a pleasant user experience. The configuration includes my Neovim setup and Zsh shell customizations.
 
+
 ## Components
 
 ### Neovim
